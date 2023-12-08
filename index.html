@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的小屋</title>
+    <style>
+        /* 页面基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* 顶部标题样式 */
+        header {
+            background-color: #ADD8E6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* 导航栏样式 */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        /* 内容区域样式 */
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* 图片样式 */
+        img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+
+        /* 旅游照片部分样式 */
+        #photos {
+            display: flex;
+            flex-wrap: wrap; /* 当空间不足时，允许项目换行 */
+            gap: 1px; /* 在项目之间添加一些间隙 */
+        }
+
+        figure {
+            flex-basis: calc(11.111% - 10px); /* 每个figure占据大约三分之一的空间，减去间隙 */
+            text-align: center; /* 将文本居中对齐 */
+        }
+
+        figcaption {
+            margin-top: 5px; /* 在图片和描述之间添加一些空间 */
+        }
+
+        /* 爱好照片部分样式 */
+        .hobby-photos {
+            display: flex;
+            flex-wrap: wrap; /* 当空间不足时，允许项目换行 */
+            gap: 1px; /* 在项目之间添加一些间隙 */
+        }
+
+        .hobby-photos figure {
+            flex-basis: 15%; /* 每个figure占据大约三分之一的空间，减去间隙 */
+            text-align: center; /* 将文本居中对齐 */
+            margin: 0
+        }
+
+        .hobby-photos figcaption {
+            margin-top: 5px; /* 在图片和描述之间添加一些空间 */
+        }
+
+
+        #message {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #message h2 {
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* 确保宽度包含padding和border */
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical; /* 允许垂直调整大小 */
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+
+
+        /* 底部样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部标题 -->
+    <header>
+        <h1>Welcome to My Little Cabin</h1>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#idol">Idol</a></li>
+            <li><a href="#message">Message</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主体内容 -->
+    <main>
+        <!-- 第一部分：个人信息 -->
+        <section id="home">
+            <h2>Personal Information</h2>
+             <img src="picture/zhengjian.jpg" alt="李梓盟" style="width:100px; height:100px;">
+            <p>Name: Li Zimeng</p>
+            <p>Gender: Female</p>
+            <p>Hometown: <a href="https://en.wikipedia.org/wiki/Yangzhou" target="_blank">Yangzhou City, Jiangsu Province</a></p>
+            <p>Major: Communication Engineering</p>
+            <p>Hobbies: Travel</p>
+        </section>
+
+        <!-- 第二部分：技能介绍 -->
+        <section id="skills">
+            <h2>My Skills</h2>
+            <p>As a dedicated second-year student majoring in Communications Engineering, I have rigorously honed my IT skills, specifically tailoring them to the nuanced demands of my field. My technical repertoire encompasses a robust understanding of network protocols and signal processing, underpinned by a deep engagement with both theoretical and practical aspects of these areas. I am not only proficient in using advanced simulation tools like MATLAB but also adept in network analysis software, which allows me to effectively translate complex concepts into actionable solutions.My academic journey is marked by a series of hands-on projects that have not only fortified my technical skills but also nurtured my problem-solving abilities and innovative thinking. These projects range from designing intricate network solutions to implementing sophisticated signal processing algorithms, each contributing to a deeper understanding of the communications landscape.Complementing my project work, my coursework has been carefully selected to reinforce my core competencies while also broadening my knowledge base. Courses like Advanced Networking, Digital Signal Processing, and Wireless Communications have been instrumental in shaping my technical perspective and providing me with a solid foundation in key areas of communications Engineering. These academic pursuits are supplemented by my active participation in relevant extracurricular activities and workshops, which further enhance my practical skills and industry knowledge.In addition to my academic endeavors, I have actively sought out internship opportunities to apply my learning in real-world scenarios. These experiences have been invaluable in exposing me to the latest trends and technologies in the communications sector, allowing me to stay ahead in a rapidly evolving field.My commitment to continuous learning and development is also evident in my participation in various technical seminars and webinars, which keep me abreast of emerging developments and innovative practices in communications Engineering. This proactive approach to education and skill enhancement is a testament to my dedication to not only excel academically but also to make a meaningful impact in the field of communications Engineering.Looking ahead, I plan to further specialize in areas such as 5G technology and Internet of Things, which are poised to revolutionize the communications landscape. By integrating these advanced technologies into my skill set, I aim to contribute significantly to the development and implementation of cutting-edge communications solutions.</p>
+            <!-- 更多技能 -->
+        </section>
+
+        <!-- 第三部分：旅游照片 -->
+        <section id="photos">
+            <h2>My Travel Photos</h2>
+            <figure>
+                <img src="picture/wuxi.jpg" alt="In Wuxi">
+                <figcaption>In Wuxi</figcaption>
+            </figure>
+            <figure>
+                <img src="picture/chongqing.jpg" alt="In ChongQing">
+                <figcaption>In ChongQing</figcaption>
+            </figure>
+            <figure>
+                <img src="picture/shanghai.jpg" alt="In ShangHai">
+                <figcaption>In ShangHai</figcaption>
+            </figure>
+            <figure>
+                <img src="picture/qingdao.jpg" alt="In QingDao">
+                <figcaption>In QingDao</figcaption>
+            </figure>
+            <figure>
+                <img src="picture/yunan.jpg" alt="In YunNan">
+                <figcaption>In YunNan</figcaption>
+            </figure>
+            <figure>
+                <img src="picture/shandong.jpg" alt="In SuZhou">
+                <figcaption>In SuZhou</figcaption>
+            </figure>
+
+            <!-- 更多照片 -->
+        </section>
+
+        <!-- 第四部分：我的爱好 -->
+        <section id="hobbies">
+            <h2>My Hobbies</h2>
+            <!-- Hobby 1: Hot Pot -->
+            <div class="hobby-photos">
+                <h3>Hot Pot</h3>
+                <figure>
+                    <img src="picture/huo1.jpg" alt="Hot Pot 1">
+                </figure>
+                <figure>
+                    <img src="picture/huo2.jpg" alt="Hot Pot 2">
+                </figure>
+                 <figure>
+                    <img src="picture/huo3.jpg" alt="Hot Pot 3">
+                </figure>
+                 <figure>
+                    <img src="picture/huo4.jpg" alt="Hot Pot 4">
+                </figure>
+                 <figure>
+                    <img src="picture/huo55.jpg" alt="Hot Pot 5">
+                </figure>
+                 <figure>
+                    <img src="picture/huo6.jpg" alt="Hot Pot 6">
+                </figure>
+                <!-- More hot pot images -->
+            </div>
+
+            <!-- Hobby 2: Nail Art -->
+            <div class="hobby-photos">
+                <h3>Nail Art</h3>
+                <figure>
+                    <img src="picture/mei1.jpg" alt="mei1">
+                </figure>
+                <figure>
+                    <img src="picture/mei2.jpg" alt="mei2">
+                </figure>
+                 <figure>
+                    <img src="picture/mei3.jpg" alt="mei3">
+                </figure>
+                 <figure>
+                    <img src="picture/mei4.jpg" alt="mei4">
+                </figure>
+                 <figure>
+                    <img src="picture/mei5.jpg" alt="mei5">
+                </figure>
+                 <figure>
+                    <img src="picture/mie6.jpg" alt="mie6">
+                </figure>
+                <!-- More nail art images -->
+            </div>
+
+            <!-- Hobby 3: Billiards -->
+            <div class="hobby-photos">
+                <h3>Billiards</h3>
+                <figure>
+                    <img src="picture/t1.jpg" alt="t1">
+                </figure>
+                <figure>
+                    <img src="picture/t2.jpg" alt="t2">
+                </figure>
+                 <figure>
+                    <img src="picture/t3.jpg" alt="t3">
+                </figure>
+                 <figure>
+                    <img src="picture/t44.jpg" alt="t44">
+                </figure>
+                 <figure>
+                    <img src="picture/tt.jpg" alt="tt">
+                </figure>
+                 <figure>
+                    <img src="picture/gun6.jpg" alt="gun6">
+                </figure>
+                <!-- More billiards images -->
+            </div>
+
+            <!-- Hobby 4: Mahjong -->
+            <div class="hobby-photos">
+                <h3>Babycats</h3>
+                <figure>
+                    <img src="picture/cat1.jpg" alt="cat1">
+                </figure>
+                <figure>
+                    <img src="picture/cat12.jpg" alt="cat12">
+                </figure>
+                 <figure>
+                    <img src="picture/cat13.jpg" alt="cat13">
+                </figure>
+                 <figure>
+                    <img src="picture/cat14.jpg" alt="cat14">
+                </figure>
+                 <figure>
+                    <img src="picture/gun.jpg" alt="gun">
+                </figure>
+                 <figure>
+                    <img src="picture/cat6.jpg" alt="cat6">
+                </figure>
+                <!-- More mahjong images -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 偶像部分 -->
+    <section id="idol">
+        <h2>My Idol - Jackson Wang</h2>
+        <p>Wang is a multi-talented artist known for his music, acting, and unique personality. For more information about Jackson Wang, please visit his <a href="https://en.wikipedia.org/wiki/Jackson_Wang" target="_blank">Wikipedia page</a>.</p>
+    </section>
+
+    <!-- 留言部分 -->
+    <section id="message">
+        <h2>Message Board</h2>
+        <!-- 留言内容 -->
+        <form id="messageForm">
+            <div class="form-group">
+                <label for="name">Name：</label>
+                <input type="text" id="name" name="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="message">Message：</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">Submit Message</button>
+        </form>
+    </section>
+
+    <!-- 页面底部 -->
+    <footer>
+        <p>All Rights Reserved &copy; [2023] [Fan77]</p>
+    </footer>
+</body>
+</html>
